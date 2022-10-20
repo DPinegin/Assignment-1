@@ -7,27 +7,31 @@
     <title>Login</title>
 </head>
 <body>
-  <!--A welcome sentence for the user-->
-  <heading>
+  <!--A welcome sentence for the user and an indication on what they should do next.
+    <h1> tags are used for the heading, and <p> tags are used for the instructions.-->
+  <header>
     <h2>Welcome to the Login Page</h1>
     <p>Please login to see the full website.</p>
-  </heading>
+  </header>
 
   <main>
     <br />
     <br />
 
 
-    <!--If the login was successful, it will take the suer to the following page-->
+    <!--If the login is submitted and all th erequired fields are filled in, 
+      it will take the user to the home-page of the website-->
     <form action="/index.html">
-      <!--user must input their email address.-->
+      <!--user must input their email address to log in.
+        An email input is used here.-->
       <label for="email-address">Enter E-Mail address here [required]:</label>
       <input type="email" name="email" id="email-address" minlength="6" maxlength="40" required/>
 
       <br />
       <br />
 
-      <!--user must input their password to log in.-->
+      <!--user must input their password to log in.
+        A password input is used here.-->
       <label for="password">Enter your password [required]:</label>
       <input type="password" name="userPassword" id="password" minlength="10" required/>
 
@@ -35,10 +39,11 @@
       <br />
       <br />
 
-
+      <!--Instructions to the user on what to do next.-->
       <p>Please select your age range:</p>
 
-      <!--User must select their correct age range.-->
+      <!--User must select their correct age range to log in.
+        A radio button input is used here.-->
       <input type="radio" id="age1" name="age" value="0" required/>
       <label for="age1">0 - 10</label>
 
@@ -60,19 +65,23 @@
       <br />
       <br />
 
-      <!--user must agree to the Terms and Services of the website.-->
+      <!--user must agree to the Terms and Services of the website to log in.
+        A checkbox input is used here.-->
       <input type="checkbox" id="agreement" name="agreement" value="Agreed" required>
-      <label for="agreement">I have read and agreed to the Terms and Conditions of this website</label>
+      <label for="agreement">I have read and agreed to the</label>
+
+      <!--a link to the Terms and Services page that the user can view.
+        In the website, this will be added to the end of the last sentence and 
+        will act as a hyperlink so before agreeing the user can view the Terms and Conditions
+        of usage.-->
+      <a href="terms.html">Terms and Condition of usage</a>
 
       <br />
-
-      <!--a link to the Terms and Services page that the user can view-->
-      <a href="terms.html">Terms and Condition for usage.</a>
-
-      <br />
       <br />
 
-      <!--the submit button to submit the form and the reset button to reset the form.-->
+      <!--the submit button to submit the form and the reset button to reset the form.
+        The type of button used for the Submit button is "submit".
+        The type of button used for the Reset button is "reset". -->
       <button type="submit" value="Submit">Submit</button>
       <button type="reset" value="Reset">Reset</button>
 
