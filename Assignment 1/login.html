@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+</head>
+<body>
+  <!--A welcome sentence for the user-->
+  <heading>
+    <h2>Welcome to the Login Page</h1>
+    <p>Please login to see the full website.</p>
+  </heading>
+
+  <main>
+    <br />
+    <br />
+
+
+    <!--If the login was successful, it will take the suer to the following page-->
+    <form action="/index.html">
+      <!--user must input their email address.-->
+      <label for="email-address">Enter E-Mail address here [required]:</label>
+      <input type="email" name="email" id="email-address" minlength="6" maxlength="40" required/>
+
+      <br />
+      <br />
+
+      <!--user must input their password to log in.-->
+      <label for="password">Enter your password [required]:</label>
+      <input type="password" name="userPassword" id="password" minlength="10" required/>
+
+
+      <br />
+      <br />
+
+
+      <p>Please select your age range:</p>
+
+      <!--User must select their correct age range.-->
+      <input type="radio" id="age1" name="age" value="0" required/>
+      <label for="age1">0 - 10</label>
+
+      <br />
+
+      <input type="radio" id="age2" name="age" value="11">
+      <label for="age2"> 11 - 13</label>
+
+      <br />
+
+      <input type="radio" id="age3" name="age" value="14">
+      <label for="age3"> 14 - 18</label>
+
+      <br />
+
+      <input type="radio" id="age4" name="age" value="19">
+      <label for="age4"> 19 + </label>
+
+      <br />
+      <br />
+
+      <!--user must agree to the Terms and Services of the website.-->
+      <input type="checkbox" id="agreement" name="agreement" value="Agreed" required>
+      <label for="agreement">I have read and agreed to the Terms and Conditions of this website</label>
+
+      <br />
+
+      <!--a link to the Terms and Services page that the user can view-->
+      <a href="terms.html">Terms and Condition for usage.</a>
+
+      <br />
+      <br />
+
+      <!--the submit button to submit the form and the reset button to reset the form.-->
+      <button type="submit" value="Submit">Submit</button>
+      <button type="reset" value="Reset">Reset</button>
+
+    </form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Site</title>
+  </head>
+  <body>
+    <!--
+      This is the header with the name of the website ("the Historion") and the 
+      navigation pane that a user can click to be brought to the next web-pages. 
+      
+      CSS was used to make the navigation pane more eye-pleasing.
+      Once a user hovers above an option in the navigation menu, the color of the option will change 
+      to mak eit appear as a button.
+    -->
+    <header>
+      <!--
+        The name of the website is cenetered for better visibility (because it will display on 
+        almost every page of the whole website).
+        The heading uses the <h1> tags, and the sub-heading uses <h3> tags. 
+      -->
+      <center>
+        <h1>The Historion</h1>
+      </center>
+
+      <center>
+        <h3>Historic Studies Based on Known Facts</h3>
+      </center>
+      <nav>
+        <style>
+          ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #44d7ff58;
+          }
+
+          li {
+            float: left;
+          }
+
+          li a {
+            display: block;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+          }
+
+          li a:hover {
+            background-color: #45cff6;
+          }
+        </style>
+
+        <!--Other web-pages are listed using an unordered list. 
+        It is more organized this way because the user can refer to the same 
+        navigational bar if he wants to change the website link.-->
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/study.html">Weekly Study</a></li>
+          <li><a href="/login.html">Login</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!--
+        Small description about the website. Tells the user what this 
+        website is about and what to expect from it. <p> tags are used to write the description.  
+        <h3> tags are used for the heading-->
+      <br />
+      <br />
+      <h3>About Website</h3>
+      <p>
+        Hello! My name is Owner and I made this webiste. This website will be
+        about history, hence the name "Historion". The topics that will be shown
+        here are mostly Ancient History and European history (yes, two very
+        different topics on the same website), with focus on art, culture,
+        mthology/folklore, military, architecture, economy and geography. Fun! I
+        hope you will be <strike>confused</strike> interested!
+      </p>
+      <p>
+        "Weekley-Study" is a weekley study about an ancient civilization. Every
+        time there will be an introduction about the civilization, geographical
+        location of the civilization, the peak of the civilization, the collapse
+        of the civilization and archaeological findings of famous arrcheologists
+        in that area. The Weekly Study will be updated every week, and on every
+        4<sup>th</sup> of the month the <i>continents</i> on which the
+        civilization is located will change.
+      </p>
+      <p>
+        The purpose of this site is to bring more people attention to history,
+        and tell the history of historical civilizations that are not found in
+        the regular school curriculum
+        <sub>(unless they are in the school curriculum)</sub>. I hope you enjoy
+        my work!
+      </p>
+    </main>
+  </body>
+</html>
