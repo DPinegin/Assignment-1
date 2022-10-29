@@ -1,0 +1,27 @@
+/* 
+  This styles the body of teh web-page to have a background color,
+  of #f5f5ff, which is white with a hint of blue using the background color
+  CSS property and a font color of midnightblue using the color CSS property. 
+*/
+body {
+  background-color: #fbfbfe;
+  color: midnightblue;
+}
+/* 
+  This styles all h1 tags to be centered aligned and have a font size of 40px. 
+*/
+h1 {
+  text-align: center;
+  font-size: 40px;
+  text-decoration: underline;
+}
+/*
+  This styles all p tags to have a font size of 24px. 
+*/
+p {
+  font-size: 24px;
+}
+/*
+  Create the styling for h1 tags on this page, and after that, create the 
+  styling for p tags on this page. 
+*/
