@@ -5,9 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>External CSS</title>
-    <link rel="stylesheet" href="stylesheets/main.css" />
+    <style>
+      body {
+        background-color: #fbfbfe;
+        color: darkmagenta;
+      }
+      h1 {
+        text-align: right;
+        font-size: 40px;
+      }
+      p {
+        font-size: 24px;
+      }
+    </style>
   </head>
   <body>
+    <!-- 
+       This webpage tests the cascading feature of CSS because this style-sheet is cascaded 
+       by the order of importance.If we set a style on a page one way first, 
+       and then we set another style on a different page later, the style 
+       that came later will be the one tat is shown. 
+    -->
     <nav>
       <ul>
         <li><a href="index.html">Inline CSS</a></li>
@@ -24,9 +42,6 @@
       <p>This page shows the effcts of adding external CSS to a web-page.</p>
 
       <p>Does this paragraph have the same styling as the previous one?</p>
-
-      <p>Hello There!</p>
-      <!--Play around with the HTML thing. -->
     </main>
   </body>
 </html>
