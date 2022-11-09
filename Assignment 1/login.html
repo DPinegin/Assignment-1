@@ -38,30 +38,31 @@
 
       <br />
       <br />
+      <fieldset form="User-Age-Range" name="User-Age-Range">
+        <legend>What is your age-range from the following options?</legend>
+        <!--Instructions to the user on what to do next.-->
+        <p>Please select the age-range that applies:</p>
 
-      <!--Instructions to the user on what to do next.-->
-      <p>Please select your age range:</p>
+        <!--User must select their correct age range to log in.
+          A radio button input is used here.-->
+        <input type="radio" id="age1" name="age" value="0" required/>
+        <label for="age1">0 - 10</label>
 
-      <!--User must select their correct age range to log in.
-        A radio button input is used here.-->
-      <input type="radio" id="age1" name="age" value="0" required/>
-      <label for="age1">0 - 10</label>
+        <br />
 
-      <br />
+        <input type="radio" id="age2" name="age" value="11">
+        <label for="age2"> 11 - 13</label>
 
-      <input type="radio" id="age2" name="age" value="11">
-      <label for="age2"> 11 - 13</label>
+        <br />
 
-      <br />
+        <input type="radio" id="age3" name="age" value="14">
+        <label for="age3"> 14 - 18</label>
 
-      <input type="radio" id="age3" name="age" value="14">
-      <label for="age3"> 14 - 18</label>
+        <br />
 
-      <br />
-
-      <input type="radio" id="age4" name="age" value="19">
-      <label for="age4"> 19 + </label>
-
+        <input type="radio" id="age4" name="age" value="19">
+        <label for="age4"> 19 + </label>
+      </fielset>
       <br />
       <br />
 
