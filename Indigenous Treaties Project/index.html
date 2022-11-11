@@ -12,28 +12,34 @@
         color: #f29f05;
       }
       figcaption p {
-        font-size: 15px;
+        font-size: 18px;
       }
-      .information-box {
-        background-color: #f2f2f2;
-        width: auto;
-        height: 200px;
-        border-radius: 5px;
-        padding: 10px 20px;
+      ul {
+        list-style: none;
+      }
+      .nav-link {
+        font-size: 18px;
       }
       #styled-by-id {
-        color: white;
+        background-color: #f3f3f3;
       }
     </style>
   </head>
   <body>
     <header>
       <h1>The Numbered Treaties of Canada</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home Page</a></li>
+          <li><a href="#">Placeholder</a></li>
+          <li><a href="#">Placeholder</a></li>
+        </ul>
+      </nav>
       <br />
       <br />
-      <h2>Treaty One</h2>
     </header>
     <main>
+      <h2>Treaty One</h2>
       <br />
       <div class="information-box">
         <h3>Background Information</h3>
@@ -119,6 +125,10 @@
       </div>
       <br />
 
+      <!-- 
+        After this assignment, change the divs to section tags.
+        Mr. Hardman, reminder that you should not dock marks for this.
+      -->
       <div class="information-box">
         <h3>The Historic Terms of the Treaty</h3>
         <p>
@@ -154,26 +164,34 @@
     </main>
 
     <footer>
-      <div>
+      <div id="styled-by-id">
         <h3>Sources:</h3>
         <ul>
-          <li><a href="https://treaty1.ca/">Treaty1</a></li>
+          <li>
+            <a href="https://treaty1.ca/" class="nav-link" target="blank"
+              >Treaty1</a
+            >
+          </li>
           <li>
             <a
               href="https://www.rcaanc-cirnac.gc.ca/eng/1360948213124/1544620003549"
+              class="nav-link"
               target="blank"
+              class=".nav-link"
               >Government of Canada</a
             >
           </li>
           <li>
-            <a href="https://en.wikipedia.org/wiki/Treaty_1" target="blank"
+            <a
+              href="https://en.wikipedia.org/wiki/Treaty_1"
+              class="nav-link"
+              target="blank"
               >Wikipedia</a
             >
           </li>
         </ul>
         <br />
-        <br />
-        <p id="styled-by-id">&#169; 2022 Daria P</p>
+        <p>&#169; 2022 Daria P</p>
       </div>
     </footer>
   </body>

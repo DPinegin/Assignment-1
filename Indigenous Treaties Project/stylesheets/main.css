@@ -1,0 +1,30 @@
+body {
+  background-color: #fbfbfe;
+  color: rgb(0, 0, 0);
+}
+h1 {
+  text-align: center;
+  font-size: 40px;
+  color: #323140;
+}
+/* Can I style h2?*/
+h2 {
+  font-size: 30px;
+  color: #323140;
+}
+h3 {
+  font-size: 23px;
+  color: #f27405;
+}
+p {
+  font-size: 18px;
+  font-family: Georgia, "Times New Roman", Cambria, serif;
+  color: #323140;
+}
+div {
+  background-color: #f2f2f2;
+  width: auto;
+  height: 200px;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
