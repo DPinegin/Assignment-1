@@ -1,3 +1,7 @@
+* {
+  line-height: 180%;
+}
+
 /*
   The external stylesheet containing all styles that should stay consistent throughout the website.
 
@@ -6,7 +10,7 @@
 */
 body {
   background-color: #fbfbfe;
-  line-height: 250%;
+  margin: 20px, 5px;
 }
 /* 
   The .nav-link class, used for navigational links, should:
@@ -15,17 +19,22 @@ body {
   and a font-weight of bold
   - have a background color of #f1f1f1 and text color of #f24c05 
 */
+/* WHAT SHOULD I DO HERE??? (CLASS COMMENT) */
 .nav-link {
   display: inline-block;
+  overflow: hidden;
   margin: 5px;
   padding: 10px;
 
-  font-size: 23px;
+  font-size: 2rem;
   font-family: Georgia, "Times New Roman", Cambria, serif;
   font-weight: bold;
 
-  background-color: #f7f7f7;
-  color: #3a539b;
+  background-color: #e5fff7;
+  color: #323140;
+}
+nav ul {
+  background-color: #e5fff7;
 }
 /* 
   The nav ul li should have:
@@ -41,8 +50,8 @@ nav ul li {
 
 nav a:hover,
 nav a:focus {
-  background-color: #3a539b;
-  color: #ffffff;
+  background-color: #94ffe8;
+  color: #494856;
 }
 /* 
   The h1 should be:
@@ -52,7 +61,7 @@ nav a:focus {
 */
 h1 {
   text-align: center;
-  font-size: 3.2rem;
+  font-size: 4rem;
   color: #323140;
 }
 /*
@@ -61,8 +70,9 @@ h1 {
   - a color of #323140
 */
 h2 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: #323140;
+  margin: 15px, 10px;
 }
 /* 
   The h3 should have:
@@ -71,9 +81,9 @@ h2 {
   http://colorsafe.co/ 
 */
 h3 {
-  font-size: 2.2em;
+  font-size: 3rem;
   font-weight: bold;
-  color: #2a5547;
+  color: #9e2510;
 }
 /* 
   The paragraphs should be:
@@ -82,9 +92,10 @@ h3 {
   - in the color of #323140 
 */
 p {
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   font-family: Georgia, "Times New Roman", Cambria, serif;
   color: #323140;
+  padding: 2px;
 }
 /* 
   The divs should have:
@@ -95,9 +106,18 @@ p {
   - a padding of 10 on top and bottom, 20 pixels on the right and left. 
 */
 section {
-  background-color: #f2f2f2;
+  background-color: #f6f6f6;
   width: auto;
   height: auto;
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 2px 25px;
+}
+figcaption p {
+  font-size: 1.4rem;
+  line-height: 25px;
+  font-family: "Times New Roman", Times, serif;
+}
+#website-link {
+  list-style: none;
+  font-size: 1.3rem;
 }
