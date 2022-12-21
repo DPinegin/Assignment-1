@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divs and Spans</title>
+    <style>
+      body {
+        display: inline-block;
+        height: 100%;
+        background-color: #38afff;
+        background-image: linear-gradient(to right, #00ae80, #eadf0a);
+        color: black;
+
+        /* 
+          This styling is iused to create the state before the animation occurs.
+          We want our body to be completely transparent, and shifted up 100px, so that
+          when the transition occurs, the body can fade in and drop down 
+          into place. 
+        */
+        opacity: 0;
+        transform: translateY(-100px);
+
+        /* 
+          This defines our animation.
+
+          We define the animation-name as fade-in.
+          We define the animation duration (how long the niamtion lasts) as 1 second.
+          We define the animation timing function (how the styling changes as it moves through the animation.)
+          as ease-in, which means it will slowly start the animation and speed-up at the end. 
+          We define the animation-delay as 2 seconds. 
+          We define the animation-fill-mode (whether the styling is kept at the end of the animation 
+          or not) to forwards, which means to keep the styling that is at the end of the animation.
+
+
+          
+          Other animation properties that we d not define in this example are: 
+
+          animation-iteration-count- how many times you want your animation to run
+
+          animation-direction-do you want your animation to go forward (normal)? 
+          Backward? Forwrad and then backward (alternate)? Backward and then 
+          forward (alternate-reverse)? 
+
+
+
+        */
+        -o-animation: fade-in 1s ease-in 2s forwards;
+        -moz-animation: fade-in 1s ease-in 2s forwards;
+        -webkit-animation: fade-in 1s ease-in 2s forwards;
+        animation: fade-in 1s ease-in 2s forwards;
+      }
+      /* 
+        This define sthe animation itself. We use @keyframes to show that we are creating an animation
+        and then we use the same name that we defined in the animation property (fade-in in this example).
+
+        Then, we define the starting point of teh animation (from) and the styling at the starting point.
+
+        Finally, we define the ending point of the animation (to) and the styling at the ending point.
+
+        NOTE: You can also define %s of where different styling occurs (i.e. 0%, 33, 66%, 100%).
+      */
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: translateY(-100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      h1 {
+        text-align: center;
+        font-size: 40px;
+      }
+      /* Style every second div. */
+      /*div {
+        background-color: aquamarine;
+      }
+      div:nth-of-type(2n) {
+        background-color: cornflowerblue;
+      }*/
+
+      /* This styles all the divs on the webpage to have the background color of
+        d4ebf2, sets the div to use the automatic width of the div and
+        sets the height to 200px. This also styles the border to have a width of 2px with a
+        solid balck line, rounds the corners of the div to have a radius of 20px, and adds
+        10px and adds 10px of padding to the top and bottom of the div as well as 20px on
+        the left and right. Finally, aligns the text to the center.*/
+      div {
+        background-color: #fbfbfe;
+        width: 80%;
+        border: 4px solid black;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-align: center;
+      }
+      p {
+        font-size: 24px;
+        color: #313131;
+      }
+      #animation {
+        width: 100px;
+        height: 100px;
+        background: greenyellow;
+        position: relative;
+        animation: mymove 5s;
+      }
+
+      /* 
+        Note: the only values that can be used for float are left, right and inherit. 
+        If you have it in your code, get rid of it because it does not work,
+        making it useless. 
+      */
+      section {
+        width: 25%;
+
+        float: left;
+        margin: 20px;
+        margin-right: 2.5%;
+
+        background-color: #ffffff;
+        border: 4px solid black;
+        height: 50vh;
+
+        border-radius: 20px;
+        text-align: center;
+      }
+
+      @keyframes mymove {
+        from {
+          left: 0px;
+        }
+        to {
+          left: 100%;
+        }
+      }
+
+      /* 
+        This is how we apply linear grdients to a polygonal area. The first parameter, 
+        is the direction of the linear gradient, can be to top, to bottom, 
+        to left to right, to top-left, to bottom-right, etc. 
+        or can be a specific degree amount, ex. 60 deg. 
+
+        The next x-parameters are the colors to show in the gradient.
+      
+        Don't forget the prefoixes used for compatability with other browsers.
+      */
+      nav {
+        padding: 10px 0;
+        background: -o-linear-gradient(60deg, #7f7fd5, #86a8e7, #91eae4);
+        background: -moz-linear-gradient(60deg, #7f7fd5, #86a8e7, #91eae4);
+        background: -webkit-linear-gradient(60deg, #7f7fd5, #86a8e7, #91eae4);
+        background: linear-gradient(60deg, #7f7fd5, #86a8e7, #91eae4);
+      }
+
+      nav ul {
+        list-style: none;
+      }
+
+      nav ul li {
+        display: inline-block;
+        margin: 10px;
+        font-size: 20px;
+      }
+
+      #styled-by-id {
+        font-family: Georgia, "Times New Roman", Cambria, serif;
+        font-weight: bold;
+      }
+
+      .nav-link {
+        border: 2px solid black;
+        margin: 4px;
+        padding: 5px;
+
+        background-color: #191970;
+        color: #f5f5ff;
+
+        -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        -moz-transition: background-color 0.3s ease-in-out,
+          color 0.3s ease-in-out;
+        -webkit-transition: background-color 0.3s ease-in-out,
+          color 0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
+      /* 
+      
+      These are the user actions that will start the transition.
+      The transition will change the font and background colors smoothly 
+      because we chnag ethe background colro and font color inside 
+      this styling block. */
+
+      nav a:hover,
+      nav a:focus {
+        background-color: #f5f5ff;
+        color: #191970;
+      }
+
+      /*This styles all the spans on teh webpage, which underlines all the spans on
+        the webpage and changes the text style to be italicized. */
+      span {
+        text-decoration: underline;
+        font-style: italic;
+      }
+
+      #cleared {
+        /* 
+          When we don't want an element to float beside other floated elements, we use the clear
+          proprty.
+
+          This property will break the floating of elements and any element added to the website
+          underneath this element will also not float beside other elements on the page. 
+
+          NOTE: Whatever value you use for float is the value you shoudl use for clear (i.e., 
+          in this case, it is left).
+        */
+        clear: left;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="nav-link">Inline CSS</a></li>
+        <li><a href="internal-css.html" class="nav-link">Internal CSS</a></li>
+        <li>
+          <a href="external-css.html" class="nav-link">External CSS</a>
+        </li>
+        <li>
+          <a href="testing-cascading.html" class="nav-link">
+            Testing Cascading
+          </a>
+        </li>
+        <li>
+          <a href="classes-and-ids.html" class="nav-link">Classes and IDs</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>Transitions and Animations</h1>
+
+      <!--
+        Note: this is not the proper way to use a dic because I have not 
+        used all the proper sematic tags yet.
+
+        This is a div, which is short for division. It is a block element, that acts
+        like a container for multiple block elements.
+      -->
+      <section>
+        <p>Watch the animations and transitions!</p>
+
+        <p>How do you like this one?</p>
+      </section>
+
+      <section>
+        <p>Watch the animations and transitions!</p>
+
+        <p>How do you like this one?</p>
+      </section>
+
+      <section>
+        <p>Watch the animations and transitions!</p>
+
+        <p>How do you like this one?</p>
+      </section>
+
+      <section>
+        <p>Watch the animations and transitions!</p>
+
+        <p>How do you like this one?</p>
+      </section>
+
+      <section>
+        <p>Watch the animations and transitions!</p>
+
+        <p>How do you like this one?</p>
+      </section>
+
+      <section>
+        <p>Watch the animations and transitions!</p>
+
+        <p>How do you like this one?</p>
+      </section>
+
+      <p id="cleared">This element should not be beside the other boxes.</p>
+
+      <div id="animation"></div>
+    </main>
+  </body>
+</html>

@@ -4,7 +4,7 @@
   CSS property and a font color of midnightblue using the color CSS property. 
 */
 body {
-  background-color: #fbfbfe;
+  background: url("images/mountain.jpg");
   color: midnightblue;
 }
 /* 

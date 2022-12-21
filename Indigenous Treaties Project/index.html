@@ -3,7 +3,7 @@
   Course: Software Development 20S
   Teacher: Scott Hardman
   School: Pembina Trails Early College
-  Date Last Modified: November 13th, 2022
+  Date Last Modified: December 18th, 2022
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -15,16 +15,47 @@
     <link rel="stylesheet" href="stylesheets/main.css" />
     <!--
       An internal stylesheet to style specific elements that are found on this webpage.
-      Specifically:
-      The span for this webpage should be orange and needs to have a font-weight of "bold".
-      Elements in the sematic tag "figcaption" should have the font-size of 22px.
-      The ID "website-link" should have a list-style of "none".
     -->
     <style>
+      /* 
+        The following styles the id called "first-image" to:
+        - For the element to be placed on the left side, allowing other elements to wrap aroudn it.
+        - To have a width of 50% of the element's container (here being <figure>).
+        - To have a margin (space around the element's border) at the top of the element 
+          to be 50 pixels. 
+      */
+      #first-image {
+        float: left;
+        width: 50%;
+        margin-top: 50px;
+      }
+      /* 
+        The following styles the heading <h2> on this page to be aligned 
+        to the center of the web-page.
+      */
+      h2 {
+        text-align: center;
+      }
+      /* 
+        The following styles the element with an id called "front-text" to: 
+        - Display as inline block, meaning it will be displayed beside other elements.
+      */
+      #front-text {
+        display: inline-block;
+        width: 40%;
+      }
+      /* 
+        The following styles all the span elements to:
+        - To have a font-weight (the thickness of the font's strokes/lines) of bold (value of 700).
+        - To have the font size of 2.6 times the root element's font size.
+        - To have an underline under the element.
+        - To have the font color of #001117, which is a dark-grey and looks like black. 
+      */
       span {
         font-weight: bold;
+        font-size: 2.6rem;
         text-decoration: underline;
-        color: #520c00;
+        color: #001117;
       }
     </style>
   </head>
@@ -48,9 +79,9 @@
         <ul>
           <li><a href="index.html" class="nav-link">Home Page</a></li>
           <li>
-            <a href="terms-of-treaty-one.html" class="nav-link"
-              >Terms and Promises</a
-            >
+            <a href="terms-of-treaty-one.html" class="nav-link">
+              Terms and Promises
+            </a>
           </li>
           <li><a href="#" class="nav-link">Placeholder</a></li>
         </ul>
@@ -62,34 +93,61 @@
     -->
     <main>
       <!--
+        An image to attract the user's attention with a acorresponding figcaption. 
+        Image has alt text to describe what the image is about to improve accessibility. 
+      -->
+      <figure id="first-image">
+        <img
+          src="images/first-nations-traditional-clothing.jpg"
+          width="100%"
+          height="20%"
+          alt="A photo of three men dressed in traditional Swan Lake First Nation's clothes.
+            There is a man at the front, a chief, and the other two other men are behind him. 
+            The man at the front is a chief of the tribe and waves long white feathers.
+            All wear outfits in orange, green, yellow and red. Their head sare adorned in 
+            bright head-dresses, made of colorful feathers and colorful strings.  
+            Photo Credit: Sault Online." />
+        <figcaption>
+          <p>
+            <b>Fig.1</b> Members of Swan Lake First Nation, dressed in their
+            traditional attire during a ce;ebration. Photo credit: Sault Online.
+          </p>
+        </figcaption>
+      </figure>
+
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <!--
         The name of the Treaty written using <h2> tags. 
       -->
       <h2>Treaty One</h2>
-
       <!--
-        Each information paragraph is contained inside a <div>. 
-        The <div> is styled in the external stylesheet to make it consistent 
-        in every webpage that it is used in.
-        
-        Each section of information contains a title written using <h3> tags and
-        the "body" of the information written using <p> tags.
+        A section that apperas beside the previous image, containing some background information
+        about teh treaty. 
       -->
-      <section>
-        <h3>Background Information</h3>
+      <section id="front-text">
         <p>
           Treaty One was established between the Imperial Crown of Great Britain
           and Ireland and the First Nations of the area.
         </p>
         <p>
-          Treaty one was negotiated and entered in
-          <span> August 1871, in Lower Fort Garry. </span>
-          The Treaty making process was set down during the Royal Proclamation
-          of 1763.
+          Treaty one was negotiated and entered in August 1871, in Lower Fort
+          Garry. The Treaty making process was set down
+          <span>during the Royal Proclamation of 1763</span>.
         </p>
       </section>
 
-      <br />
-
+      <!--
+        Each information paragraph is contained inside a <section>. 
+        The <section> is styled in the external stylesheet to make it consistent 
+        in every webpage that it is used in.
+        
+        Each section of information contains a title written using <h3> tags and
+        the "body" of the information written using <section> tags.
+      -->
       <section>
         <h3>Indigenous Communities that signed the Treaty</h3>
         <p>
@@ -101,57 +159,50 @@
       </section>
 
       <br />
-      <br />
-
       <!--
         Two images of maps as of client's request.
 
-        Each image is contained in the <figure> sematic tag with a <figcaption> following it.
+        Each image is contained in the <figure> sematic tag with a <figcaption> inside it.
         Each image has alt text to describe what the image is about to improve accessibility. 
       -->
       <figure>
         <img
           src="images/treaty-one.jpg"
           width="100%"
-          height="900px"
+          height="10%"
           alt="A map of the bottom of Manitoba. The map showcases the borders of Treaty One and Treaty Two.
             The treaty one borders also display the traditional lands of the Anishinaabe, Cree and 
             Dakota peoples. In addition, it is important to recognize that Treaty One was 
             signed on the homeland of the Metis nation. Photo Credit: Canadian Geographic." />
         <figcaption>
           <p>
-            <b>Fig.1</b> This is a map of the bottom of Manitoba. The map
-            showcases the borders of Treaty One and Treaty Two. The treaty one
-            borders also display the traditional lands of the Anishinaabe, Cree
-            and Dakota peoples. In addition, it is important to recognize that
-            Treaty One was signed on the homeland of the Metis nation. Important
-            current land-marks such as cities are also marked on the map.
+            <b>Fig.2</b> The map showcases the borders of Treaty One and Treaty
+            Two. The treaty one borders also display the traditional lands of
+            the Anishinaabe, Cree and Dakota peoples. In addition, it is
+            important to recognize that Treaty One was signed on the homeland of
+            the Metis nation. Important current land-marks such as cities are
+            also marked on the map.
           </p>
         </figcaption>
       </figure>
-
-      <br />
 
       <figure>
         <img
           src="images/canada-treaty-map.jpg"
           width="100%"
-          height="900px"
+          height="10%"
           alt="A map of Canada with the signed treaties colored. Treaty one is colored in blue,
             and is located at the bottom of the province of Manitoba, right by the border. 
             Photo Credit: Wikipedia." />
 
         <figcaption>
           <p>
-            <b>Fig.2</b> A map Canada displaying the numbered treaties. Treaty
+            <b>Fig.3</b> A map Canada displaying the numbered treaties. Treaty
             one is colored in blue, and is located at the bottom of Manitoba,
             right by the border with the United States.
           </p>
         </figcaption>
       </figure>
-
-      <br />
-      <br />
 
       <section>
         <h3>Historical Significance</h3>
@@ -163,12 +214,6 @@
         </p>
       </section>
 
-      <br />
-
-      <!-- 
-        After this assignment, change the divs to section tags.
-        Mr. Hardman, reminder that you should not dock marks for this.
-      -->
       <section>
         <h3>The Historic Terms of the Treaty</h3>
         <p>
@@ -184,8 +229,6 @@
         </p>
       </section>
 
-      <br />
-
       <section>
         <h3>Implementation of the Treaty in Current Time</h3>
         <p>
@@ -200,33 +243,37 @@
           provide documents with Indigenous rights as written in the treaties.
         </p>
       </section>
-
-      <br />
-      <br />
     </main>
 
     <!--
       The footer of the website containing source information and copyright information.
-      The sources and the copyright information are contained in a <div> tag.
+      The source information is contained in a <section> tag. 
+      The source information is styled using a "source-link" class that is styled
+      in the external stylesheet.
      -->
-    <!--ADD A CLASS TO THE SOURCE LINKS.-->
     <footer>
       <section>
         <h3>Sources:</h3>
-        <ul id="website-link">
+        <ul>
           <li>
-            <a href="https://treaty1.ca/" target="blank">Treaty One Website</a>
+            <a href="https://treaty1.ca/" target="blank" class="source-link">
+              Treaty One Website
+            </a>
           </li>
           <li>
             <a
               href="https://www.rcaanc-cirnac.gc.ca/eng/1360948213124/1544620003549"
-              target="blank">
-              Government of Canada Treaty One Webpage
+              target="blank"
+              class="source-link">
+                Government of Canada Treaty One Webpage
             </a>
           </li>
           <li>
-            <a href="https://en.wikipedia.org/wiki/Treaty_1" target="blank">
-              Wikipedia Treaty One Web-Page
+            <a
+              href="https://en.wikipedia.org/wiki/Treaty_1"
+              target="blank"
+              class="source-link">
+                Wikipedia Treaty One Web-Page
             </a>
           </li>
         </ul>
