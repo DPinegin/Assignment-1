@@ -17,6 +17,10 @@
       An internal stylesheet to style specific elements that are found on this webpage.
     -->
     <style>
+      #front-information {
+        background-color: #fbfbfe;
+        padding: 0;
+      }
       /* 
         The following styles the id called "first-image" to:
         - For the element to be placed on the left side, allowing other elements to wrap aroudn it.
@@ -27,7 +31,7 @@
       #first-image {
         float: left;
         width: 50%;
-        margin-top: 50px;
+        margin-top: 1.5%;
       }
       /* 
         The following styles the heading <h2> on this page to be aligned 
@@ -41,6 +45,7 @@
         - Display as inline block, meaning it will be displayed beside other elements.
       */
       #front-text {
+        margin: 2.5%;
         display: inline-block;
         width: 40%;
       }
@@ -53,7 +58,7 @@
       */
       span {
         font-weight: bold;
-        font-size: 2.6rem;
+        font-size: 4.5rem;
         text-decoration: underline;
         color: #001117;
       }
@@ -65,7 +70,9 @@
       menu written using unordered lists.
     -->
     <header>
-      <h1>The Numbered Treaties of Canada</h1>
+      <section id="title">
+        <h1>The Numbered Treaties of Canada</h1>
+      </section>
       <!--
         The navigation menu contained in the <nav> sematic tag.
 
@@ -83,7 +90,11 @@
               Terms and Promises
             </a>
           </li>
-          <li><a href="#" class="nav-link">Placeholder</a></li>
+          <li>
+            <a href="current-day-treaty-one.html" class="nav-link">
+              Treaty One Today
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -92,43 +103,35 @@
       The <main> sematic tag used to contain all the main content of the website.
     -->
     <main>
-      <!--
-        An image to attract the user's attention with a acorresponding figcaption. 
-        Image has alt text to describe what the image is about to improve accessibility. 
-      -->
-      <figure id="first-image">
-        <img
-          src="images/first-nations-traditional-clothing.jpg"
-          width="100%"
-          height="20%"
-          alt="A photo of three men dressed in traditional Swan Lake First Nation's clothes.
+      <section id="front-information">
+        <figure id="first-image">
+          <img
+            src="images/first-nations-traditional-clothing.jpg"
+            width="100%"
+            height="100%"
+            alt="A photo of three men dressed in traditional Swan Lake First Nation's clothes.
             There is a man at the front, a chief, and the other two other men are behind him. 
             The man at the front is a chief of the tribe and waves long white feathers.
             All wear outfits in orange, green, yellow and red. Their head sare adorned in 
             bright head-dresses, made of colorful feathers and colorful strings.  
             Photo Credit: Sault Online." />
-        <figcaption>
-          <p>
-            <b>Fig.1</b> Members of Swan Lake First Nation, dressed in their
-            traditional attire during a ce;ebration. Photo credit: Sault Online.
-          </p>
-        </figcaption>
-      </figure>
+          <figcaption>
+            <p>
+              <b>Fig.1</b> Members of Swan Lake First Nation, dressed in their
+              traditional attire during a celebration. Photo credit: Sault
+              Online.
+            </p>
+          </figcaption>
+        </figure>
+      </section>
 
       <br />
       <br />
       <br />
       <br />
 
-      <!--
-        The name of the Treaty written using <h2> tags. 
-      -->
       <h2>Treaty One</h2>
-      <!--
-        A section that apperas beside the previous image, containing some background information
-        about teh treaty. 
-      -->
-      <section id="front-text">
+      <div id="front-text">
         <p>
           Treaty One was established between the Imperial Crown of Great Britain
           and Ireland and the First Nations of the area.
@@ -138,8 +141,16 @@
           Garry. The Treaty making process was set down
           <span>during the Royal Proclamation of 1763</span>.
         </p>
-      </section>
+      </div>
 
+      <!--
+        An image to attract the user's attention with a acorresponding figcaption. 
+        Image has alt text to describe what the image is about to improve accessibility. 
+      -->
+      <br />
+      <br />
+      <br />
+      <br />
       <!--
         Each information paragraph is contained inside a <section>. 
         The <section> is styled in the external stylesheet to make it consistent 
@@ -185,7 +196,7 @@
           </p>
         </figcaption>
       </figure>
-
+      <br />
       <figure>
         <img
           src="images/canada-treaty-map.jpg"
@@ -205,16 +216,6 @@
       </figure>
 
       <section>
-        <h3>Historical Significance</h3>
-        <p>
-          Treaty One was the first signed treaty created in Canada. It is also
-          <span>the first numbered treaty</span>. What makes Treaty One
-          different from other Treaties is the fact that both Treaty One and
-          Treaty Two had fewer clauses than the treaties that would follow.
-        </p>
-      </section>
-
-      <section>
         <h3>The Historic Terms of the Treaty</h3>
         <p>
           The treaty
@@ -229,18 +230,24 @@
         </p>
       </section>
 
+      <section id="quote">
+        <div>
+          <p>
+            "...Treaty One would be in place for 'as long as the sun shines, the
+            grass grows and the river flows'..."
+          </p>
+        </div>
+        <br />
+        <p>- Alexander Morris, the first Treaty Commissioner</p>
+      </section>
+
       <section>
-        <h3>Implementation of the Treaty in Current Time</h3>
+        <h3>Historical Significance</h3>
         <p>
-          Treaty One establishes clearly defined land ownership and
-          jurisdiction, and
-          <span>
-            foster a new relationship based on mutual respect, trust and
-            understanding.
-          </span>
-          In addition, they provide guidelines on how Europeans can use the
-          traditional land that Indigenous Peoples have occupied. They also
-          provide documents with Indigenous rights as written in the treaties.
+          Treaty One was the first signed treaty created in Canada. It is also
+          <span>the first numbered treaty</span>. What makes Treaty One
+          different from other Treaties is the fact that both Treaty One and
+          Treaty Two had fewer clauses than the treaties that would follow.
         </p>
       </section>
     </main>
@@ -250,14 +257,14 @@
       The source information is contained in a <section> tag. 
       The source information is styled using a "source-link" class that is styled
       in the external stylesheet.
-     -->
+    -->
     <footer>
       <section>
         <h3>Sources:</h3>
         <ul>
           <li>
             <a href="https://treaty1.ca/" target="blank" class="source-link">
-              Treaty One Website
+              Click here to go to Treaty One Website
             </a>
           </li>
           <li>
@@ -265,7 +272,7 @@
               href="https://www.rcaanc-cirnac.gc.ca/eng/1360948213124/1544620003549"
               target="blank"
               class="source-link">
-                Government of Canada Treaty One Webpage
+              Click here to go to Government of Canada Treaty One Webpage
             </a>
           </li>
           <li>
@@ -273,7 +280,7 @@
               href="https://en.wikipedia.org/wiki/Treaty_1"
               target="blank"
               class="source-link">
-                Wikipedia Treaty One Web-Page
+              Click here to go to Wikipedia Treaty One Web-Page
             </a>
           </li>
         </ul>
@@ -281,7 +288,7 @@
 
       <br />
 
-      <p>&#169; 2022 Daria P</p>
+      <p>&#169; 2022-2023 Daria P</p>
     </footer>
   </body>
 </html>

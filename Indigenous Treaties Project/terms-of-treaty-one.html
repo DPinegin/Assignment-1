@@ -13,6 +13,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Terms of Treaty One</title>
     <link rel="stylesheet" href="stylesheets/main.css" />
+    <style>
+      /*
+        New transition sourced from: https://www.joshwcomeau.com/animation/css-transitions/
+        animation sources: https://blog.hubspot.com/website/css-animation-examples
+      */
+      .anniversary {
+        background: -webkit-linear-gradient(160deg, #92fe9d, #c4f9f3);
+        background: -moz-linear-gradient(160deg, #92fe9d, #c4f9f3);
+        background: -o-linear-gradient(160deg, #92fe9d, #c4f9f3);
+        background: linear-gradient(160deg, #92fe9d, #c4f9f3);
+        border: none;
+        padding: 2%;
+        color: #323140;
+        font-size: 5.5rem;
+        text-align: center;
+        display: inline-block;
+        text-decoration: none;
+        transition: transform 250ms;
+        position: relative;
+        font-weight: bolder;
+      }
+      .anniversary:hover {
+        transform: translateY(-20%);
+      }
+      .direction-image {
+        opacity: 0.9;
+        filter: brightness(50%);
+      }
+      #manitoba-treaties {
+        width: auto;
+        background-image: url("images/treaty-one-celebration.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+      }
+      #manitoba-treaties p {
+        color: white;
+      }
+      #manitoba-treaties-title {
+        font-size: 20rem;
+        font-weight: bolder;
+        color: rgb(243, 243, 243);
+        bottom: 8px;
+        left: 16px;
+        display: inline-block;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -20,8 +67,9 @@
         The header of the webpage. Contains the main heading written using <h1>, and the navigation
         menu written using unordered lists.
       -->
-      <h1>The Numbered Treaties of Canada</h1>
-      <br />
+      <section id="title">
+        <h1>The Numbered Treaties of Canada</h1>
+      </section>
       <!--
         The navigation menu contained in the <nav> sematic tag.
 
@@ -39,10 +87,13 @@
               Terms and Promises
             </a>
           </li>
-          <li><a href="#" class="nav-link">Placeholder</a></li>
+          <li>
+            <a href="current-day-treaty-one.html" class="nav-link">
+              Treaty One Today
+            </a>
+          </li>
         </ul>
       </nav>
-      <br />
     </header>
 
     <!--
@@ -67,7 +118,19 @@
         Most sections also contain an unordered list that lists different promises.
         The list items in the unordered list are styled using a class called
         "description-list-style", and is styled in the external stylesheet. 
-      -->
+        -->
+
+      <section id="hello">
+        <h1 style="display: inline-block">We are</h1>
+        <!-- Scroller Start -->
+
+        <div class="scroller">
+          <span>
+            Peguis<br />Sagkeeng<br />Brokenhead<br />Treaty Partners
+          </span>
+        </div>
+      </section>
+
       <section>
         <h3>Promises Made from the Canadian Side</h3>
         <p>
@@ -93,17 +156,80 @@
           </li>
         </ul>
       </section>
+      <section>
+        <h3>Obligations of the Crown</h3>
+        <p>
+          "...will furnish one hundred and sixty acres [64.75 hectares] for each
+          family of five, or in that proportion for larger or smaller families”
+          and an additional area of 25 square miles [64.75 km] reserved for the
+          Portage Band (now Long Plain, Swan Lake and Sandy Bay bands)..."
+        </p>
+        <p>
+          “... Her Majesty agrees to maintain a school on each reserve hereby
+          made whenever the Indians of the reserve should desire it...”
+        </p>
+        <p>
+          “...Within the boundary of Indian reserves ... no intoxicating liquor
+          shall be allowed to be introduced or sold...”
+        </p>
+        <p>
+          “... In every year ensuring the date hereof ... pay to each Indian
+          family of five persons the sum of fifteen dollars Canadian currency,
+          or in like proportion for a larger or smaller family, such payment to
+          be made in such articles as the Indians shall require of blankets,
+          clothing, prints (assorted colours), twine or traps, at the current
+          cost price in Montreal, or otherwise, if Her Majesty shall deem the
+          same desirable in the interests of Her Indian people, in cash...”
+        </p>
+        <p>
+          “...If, at the date of the execution of this treaty, there are any
+          settlers within the bounds of any lands reserved by any band, Her
+          Majesty reserves the right to deal with such settlers as She shall
+          deem just, so as not to diminish the extent of land allotted to the
+          Indians...”
+        </p>
+      </section>
 
+      <section id="manitoba-treaties">
+        <p id="manitoba-treaties-title">Treaties in Manitoba</p>
+        <div id="manitoba-treaties-background">
+          <p>
+            There are many historial landmarks in Manitoba regarding the
+            Treaties and the Treaty-making process.
+          </p>
+          <p>
+            Many sites are still up for people to visit and learn about the
+            importance of the Treaties and current implementations of the
+            Treaties. Click the following link to learn more.
+          </p>
+        </div>
+        <br />
+        <a
+          href="https://www.travelmanitoba.com/places/treaty-areas/"
+          target="blank"
+          class="anniversary">
+          Click here to go to Travel-Manitoba Treaties in Manitoba Website
+        </a>
+      </section>
       <section>
         <h3>Promises Made From the Side of the First Nations</h3>
         <p>
           First Nations, as written in the text, were to “cede, release,
-          surrender and yield to her Majesty Queen” an area of land described in
-          the treaty. The land described is present-day southeast and
-          south-central Manitoba, including the Red River Valley, and stretching
-          north to the lower parts of Lake Manitoba and Lake Winnipeg and west
-          along the Assiniboine River to the towns of Portage la Prairie and
-          Brandon.
+          surrender and yield to her Majesty Queen” an area of land as was
+          described in the treaty. The land described is current-day southeast
+          and south-central Manitoba, including the Red River Valley, and
+          stretching north to the lower parts of Lake Manitoba and Lake Winnipeg
+          and west along the Assiniboine River to the towns of Portage la
+          Prairie and Brandon.
+        </p>
+      </section>
+      <section>
+        <h3>Obligations of the First Nations</h3>
+        <p>
+          “... to observe this treaty and to maintain perpetual peace between
+          themselves and Her Majesty’s white subjects, and not to interfere with
+          the property or in any way molest the persons of Her Majesty’s white
+          or other subjects...”
         </p>
       </section>
 
@@ -164,14 +290,14 @@
       The source information is contained in a <section> tag. 
       The source information is styled using a "source-link" class that is styled
       in the external stylesheet. 
-     -->
+    -->
     <footer>
       <section>
         <h3>Sources:</h3>
         <ul>
           <li>
             <a href="https://treaty1.ca/" target="blank" class="source-link">
-              Treaty One Website
+              Click here to go to Treaty One Website
             </a>
           </li>
           <li>
@@ -179,7 +305,8 @@
               href="https://www.canada.ca/en/parks-canada/news/2021/08/treaty-one-nation-and-government-of-canada-commemorate-150th-anniversary-of-treaty-no-1.html"
               target="blank"
               class="source-link">
-                Government of Canada Treaty One Anniversary Webpage
+              Click here to go to Government of Canada Treaty One Anniversary
+              Webpage
             </a>
           </li>
         </ul>
@@ -187,7 +314,7 @@
 
       <br />
 
-      <p>&#169; 2022 Daria P</p>
+      <p>&#169; 2022-2023 Daria P</p>
     </footer>
   </body>
 </html>

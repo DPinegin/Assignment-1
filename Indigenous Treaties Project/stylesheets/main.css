@@ -46,16 +46,16 @@
   - A space between letters of 0.2 pixels. 
 */
 * {
-  line-height: 180%;
-  word-spacing: 2.5px;
-  letter-spacing: 0.2px;
+  line-height: 140%;
+  word-spacing: 0.2rem;
+  letter-spacing: 0.02rem;
 }
 /* 
   The following will style the HTML element (the root element) to have:
   - a default font-size of 100% of the browser's default font-size. 
 */
 html {
-  font-size: 100%;
+  font-size: 62.5%;
 }
 
 /* 
@@ -68,7 +68,16 @@ html {
 body {
   font-size: 1.6rem;
   background-color: #fbfbfe;
-  margin: 20px, 5px;
+  margin: 2.5%;
+}
+
+#title {
+  width: auto;
+  height: 5%;
+  background: -webkit-linear-gradient(40deg, #9d0101, #240b36);
+  background: -moz-linear-gradient(40deg, #9d0101, #240b36);
+  background: -o-linear-gradient(40deg, #9d0101, #240b36);
+  background: linear-gradient(50deg, #9d0101, #240b36);
 }
 /* 
   The following will style the <nav> element to have:
@@ -76,6 +85,11 @@ body {
 */
 nav {
   background-color: #c4f9f3;
+  margin: 1.8%;
+}
+ul {
+  margin: 0;
+  padding: 0;
 }
 /* 
   The following will style the unordered list inside the <nav> element to have:
@@ -89,9 +103,9 @@ nav {
   - To have no bullet-points for each list-item. 
 */
 nav ul {
-  margin: 20px;
+  margin: 1%;
   padding: 0;
-  font-size: 2.4rem;
+  font-size: 4.5rem;
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
   color: #323140;
@@ -115,10 +129,7 @@ nav li {
 */
 nav a {
   display: inline-block;
-  height: 100%;
-
-  padding: 25px 30px;
-
+  padding: 5% 30px;
   color: #323140;
 
   text-decoration: none;
@@ -144,9 +155,10 @@ nav a:focus {
   - To align the text to the heading to the center of the web-page.
 */
 h1 {
-  font-size: 6.5rem;
-  color: #b20101;
+  font-size: 12rem;
+  color: #ededed;
   text-align: center;
+  margin: 3.8%;
 }
 /* 
   The following will style the <h2> (second largest haeding) to have the following:
@@ -158,13 +170,13 @@ h1 {
     of 0 pixels on the top and bottom and 40 pixels on the right and left.
 */
 h2 {
-  font-size: 5.5rem;
+  font-size: 8rem;
   color: #9d0101;
 
   display: inline-block;
   width: 40%;
 
-  margin: 0px 40px;
+  margin: 0 2%;
 }
 /* 
   The following styles the <p> elements in a <figcaption> element to have the following:
@@ -177,10 +189,10 @@ h2 {
 */
 
 figcaption p {
-  font-size: 2rem;
-  line-height: 25px;
+  font-size: 3.5rem;
+  line-height: 140%;
   font-family: "Times New Roman", Times, serif;
-  margin-bottom: 40px;
+  margin-bottom: 4%;
 }
 /* 
   The following will style the <h3> element to have the following:
@@ -190,7 +202,7 @@ figcaption p {
   - To have a font color of #9d0101, which is a darker red than the red of the <h1>.
 */
 h3 {
-  font-size: 4.2rem;
+  font-size: 6.5rem;
   font-weight: bold;
   margin: 1%;
   color: #9d0101;
@@ -204,7 +216,7 @@ h3 {
   - To have a margin (space around the element's border) to be 1.5% of the webpage.
 */
 p {
-  font-size: 2.5rem;
+  font-size: 4.5rem;
   font-family: "Times New Roman", Times, serif;
   color: #323140;
   margin: 1.5%;
@@ -223,8 +235,8 @@ section {
   background-color: #f0f0f0;
   width: 95%;
   height: auto;
-  padding: 25px;
-  margin: 50px;
+  padding: 1%;
+  margin: 2%;
 }
 /* 
   The following styles all elements that are part of the class called "description-list-style" to have:
@@ -233,7 +245,27 @@ section {
 */
 .description-list-style {
   margin: 2%;
-  font-size: 2.5rem;
+  font-size: 4.5rem;
+}
+
+#quote {
+  background-color: #fbfbfe;
+}
+#quote div p {
+  font-size: 7rem;
+  font-family: Georgia, Times, serif;
+  font-weight: bolder;
+  text-align: center;
+  color: #53536e;
+  font-style: italic;
+}
+#quote p {
+  font-size: 5rem;
+  font-family: Georgia, Times, serif;
+  font-weight: bolder;
+  text-align: center;
+  color: #53536e;
+  font-style: italic;
 }
 /* 
   The following styles all elements that are part of the class called "source-link" to have:
@@ -242,5 +274,111 @@ section {
 */
 .source-link {
   list-style: none;
-  font-size: 2.5rem;
+  font-size: 4rem;
+}
+
+#hello {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fbfbfe;
+  color: #323140;
+}
+#hello h1 {
+  color: #323140;
+  line-height: 1.4em;
+}
+
+/* Scroller styling */
+.scroller {
+  display: inline-block;
+  height: 16rem;
+  line-height: 0;
+  overflow: hidden;
+  width: 52em;
+  position: relative;
+}
+.scroller > span {
+  position: absolute;
+  font-size: 12rem;
+  line-height: 1.4em;
+  text-align: center;
+  -webkit-animation: slide 5s;
+  -moz-animation: slide 5s;
+  -o-animation: slide 5s;
+  animation: slide 5s;
+  /* -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
+  font-weight: bold;
+}
+@-webkit-keyframes slide {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -1.4em;
+  }
+  50% {
+    top: -2.8em;
+  }
+  75% {
+    top: -4.2em;
+  }
+}
+@-moz-keyframes slide {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -1.4em;
+  }
+  50% {
+    top: -2.8em;
+  }
+  75% {
+    top: -4.2em;
+  }
+}
+@-o-keyframes slide {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -1.4em;
+  }
+  50% {
+    top: -2.8em;
+  }
+  75% {
+    top: -4.2em;
+  }
+}
+@keyframes slide {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -1.4em;
+  }
+  50% {
+    top: -2.8em;
+  }
+  75% {
+    top: -4.2em;
+  }
 }

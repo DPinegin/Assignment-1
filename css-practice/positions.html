@@ -98,7 +98,7 @@
           The value of "none", will make it so that the element does not display on the
           webpage and it does not save the space that would be used by the element. 
         */
-        display: none;
+        /* display: none; */
         padding: 10px 0;
         background: -o-linear-gradient(60deg, #7f7fd5, #86a8e7, #91eae4);
         background: -moz-linear-gradient(60deg, #7f7fd5, #86a8e7, #91eae4);
@@ -110,8 +110,9 @@
         list-style: none;
       }
 
-      nav ul li {
+      nav li {
         display: inline-block;
+        width: 40%;
         margin: 10px;
         font-size: 20px;
       }
@@ -122,6 +123,15 @@
       }
 
       .nav-link {
+        /* 
+          In this example, we had to change the anchors inside our list items to be 
+          inline-block elements because by deafault they are inline elements and inline-elements 
+          do not allow you to change the width and height of those elements (i.e., width: 100%).
+
+          NOTE: This will be very important when we talk about flex and grid later on. 
+        */
+        display: inline-block;
+        width: 100%;
         border: 2px solid black;
         margin: 4px;
         padding: 5px;
