@@ -1,0 +1,37 @@
+/* 
+  This styles every element on the page to include padding and border-measurments
+  when calculating the width and height of elements. 
+
+  Normally, the actual width of an element is calculted like so: 
+    actual width = width property + padding property + border property
+
+  Now, because we set box-sizing to border-box, the width is going to be the 
+  width of the whole element is going to be the width that we state is going to b epart of 
+  the width property for that element. 
+    actual width = width property = content width +padding + border. 
+*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+nav ul {
+  /* 
+    This styles the navigation's unordered list to be  aflex-box container.
+    Flex-box containers-typically helpd with designing responsive webpages. 
+  */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* 
+  This styles the anchors inside the navigation bar to fill the width and the
+  height of the list items they are inside.
+*/
+nav a {
+  width: 100%;
+  height: 100%;
+}

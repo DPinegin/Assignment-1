@@ -326,7 +326,7 @@ section {
   The following will style the element that has an id of "treaty-partners-animation" to have:
   - A position of relative, meaning that the element will be positioned relative to its default (static)
     position, unless you start changing the CSS properties for top, right, bottom, and left.
-  -Flex???????????????????????????????????????????
+  - To have a display behavior of flex (displays elements as block-level flex containers). 
   - Have a background color of #fbfbfe, which is an off white and is also the color of the background of the website
   - To have a font-color of #323140, which is a dark-grey with a hint of blue.
 */
@@ -388,21 +388,49 @@ section {
   - To have a font-size of 12 times the root-elements default font size.
   - To have a line-height of 1.4 relative to the font-size of the parent-element
   - To align the text to the center of the parent element.
-  - To 
+  - Animation:
+    - Defined the animation name as "sliding-words" (the name of the animation). 
+    - Defined the animation duration as 5 seconds (for how long the animation will run for).
+    - Defined the animation delay as 1 second (how long will the animation delay for). 
+    - Defined the animation fill-mode (whether the animation will keep it sstyling at the end)
+      as forwards, which means that the animation will keep its styling at the end. 
   - To have a font-weight (the thickness of the font's strokes/lines) of bold (value of 700).
+
+  Comment credit : Scott Hardman, 2023
 */
 #scroller > span {
   position: absolute;
   font-size: 12rem;
   line-height: 1.4em;
   text-align: center;
-  -webkit-animation: slide 5s 1 forwards;
-  -moz-animation: slide 5s 1 forwards;
-  -o-animation: slide 5s 1 forwards;
-  animation: slide 5s 1 forwards;
+  -webkit-animation: sliding-words 5s 1 forwards;
+  -moz-animation: sliding-words 5s 1 forwards;
+  -o-animation: sliding-words 5s 1 forwards;
+  animation: sliding-words 5s 1 forwards;
   font-weight: bold;
 }
-@-webkit-keyframes slide {
+/* 
+  The following will style the @keyframes (set of animation styles, where each style has an offset value)
+  of the animation called "sliding-words" 
+  with the prefix webkit (to make it compatible with Apple Safari, Microsoft Edge, Google Chrome and 
+  modern version of Opera) to have the following: 
+  - At the starting point, 0%, for the top to be at 0;
+  - At 25% through the animation for the top to be at -1.4 units relative to the font-size of the parent element
+  (to the viewer it will look like the element moved up).
+  - At 50% through the animation for the top to be at -2.8 units relative to the font-size of the parent element
+  (to the viewer it will look like the element moved up).
+  - At 75% through the animation for the top to be at -4.2 units relative to the font-size of the parent element
+  (to the viewer it will look like the element moved up).
+  - At 100% (the end of the animation) for the top to be at -4.2 units relative to the font-size of the parent element
+  (to the viewer it will look like the stayed where it is. So in the end, the animation will look like the element
+  slowly moved up once, twice, three times and then stayed in its final position. Due to the fact that this elemnt
+  also has a list of words on them the user will see word1, then it will move up and word2 will appear, then 
+  the word will move up once again and word3 will appear, then word3 will move up again and word4 will appear and 
+  stay).
+
+  Credit: Defintion for @keyframes sourced from https://angular.io/api/animations/keyframes. 
+*/
+@-webkit-keyframes sliding-words {
   0% {
     top: 0;
   }
@@ -419,7 +447,28 @@ section {
     top: -4.2em;
   }
 }
-@-moz-keyframes slide {
+/* 
+  The following will style the @keyframes (set of animation styles, where each style has an offset value)
+  of the animation called "sliding-words" 
+  with the prefix moz (to make it compatible with Mozilla Firefox) to have the following: 
+  - At the starting point, 0%, for the top to be at 0;
+  - At 25% through the animation for the top to be at -1.4 units relative to the font-size of the parent element
+  (to the viewer it will look like the element moved up).
+  - At 50% through the animation for the top to be at -2.8 units relative to the font-size of the parent element
+  (to the viewer it will look like the element moved up).
+  - At 75% through the animation for the top to be at -4.2 units relative to the font-size of the parent element
+  (to the viewer it will look like the element moved up).
+  - At 100% (the end of the animation) for the top to be at -4.2 units relative to the font-size of the parent element
+  (to the viewer it will look like the stayed where it is. So in the end, the animation will look like the element
+  slowly moved up once, twice, three times and then stayed in its final position. Due to the fact that this elemnt
+  also has a list of words on them the user will see word1, then it will move up and word2 will appear, then 
+  the word will move up once again and word3 will appear, then word3 will move up again and word4 will appear and 
+  stay).
+
+  Credit: Defintion for @keyframes sourced from https://angular.io/api/animations/keyframes. 
+*/
+
+@-moz-keyframes sliding-words {
   0% {
     top: 0;
   }
@@ -436,7 +485,27 @@ section {
     top: -4.2em;
   }
 }
-@-o-keyframes slide {
+/* 
+  The following will style the @keyframes (set of animation styles, where each style has an offset value)
+  of the animation called "sliding-words" 
+  with the prefix o (to make it compatible with older versions of Opera) to have the following: 
+  - At the starting point, 0%, for the top to be at 0;
+  - At 25% through the animation for the top to be at -1.4 units relative to the font-size of the parent element
+  (to the viewer it will look like the element moved up).
+  - At 50% through the animation for the top to be at -2.8 units relative to the font-size of the parent element
+  (to the viewer it will look like the element moved up).
+  - At 75% through the animation for the top to be at -4.2 units relative to the font-size of the parent element
+  (to the viewer it will look like the element moved up).
+  - At 100% (the end of the animation) for the top to be at -4.2 units relative to the font-size of the parent element
+  (to the viewer it will look like the stayed where it is. So in the end, the animation will look like the element
+  slowly moved up once, twice, three times and then stayed in its final position. Due to the fact that this elemnt
+  also has a list of words on them the user will see word1, then it will move up and word2 will appear, then 
+  the word will move up once again and word3 will appear, then word3 will move up again and word4 will appear and 
+  stay).
+
+  Credit: Defintion for @keyframes sourced from https://angular.io/api/animations/keyframes. 
+*/
+@-o-keyframes sliding-words {
   0% {
     top: 0;
   }
@@ -453,7 +522,26 @@ section {
     top: -4.2em;
   }
 }
-@keyframes slide {
+/* 
+  The following will style the @keyframes (set of animation styles, where each style has an offset value)
+  of the animation called "sliding-words" to have the following: 
+  - At the starting point, 0%, for the top to be at 0;
+  - At 25% through the animation for the top to be at -1.4 units relative to the font-size of the parent element
+  (to the viewer it will look like the element moved up).
+  - At 50% through the animation for the top to be at -2.8 units relative to the font-size of the parent element
+  (to the viewer it will look like the element moved up).
+  - At 75% through the animation for the top to be at -4.2 units relative to the font-size of the parent element
+  (to the viewer it will look like the element moved up).
+  - At 100% (the end of the animation) for the top to be at -4.2 units relative to the font-size of the parent element
+  (to the viewer it will look like the stayed where it is. So in the end, the animation will look like the element
+  slowly moved up once, twice, three times and then stayed in its final position. Due to the fact that this elemnt
+  also has a list of words on them the user will see word1, then it will move up and word2 will appear, then 
+  the word will move up once again and word3 will appear, then word3 will move up again and word4 will appear and 
+  stay).
+
+  Credit: Defintion for @keyframes sourced from https://angular.io/api/animations/keyframes. 
+*/
+@keyframes sliding-words {
   0% {
     top: 0;
   }
