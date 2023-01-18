@@ -3,7 +3,7 @@
   Course: Software Development 20S
   Teacher: Scott Hardman
   School: Pembina Trails Early College
-  Date Last Modified: January 11th, 2023
+  Date Last Modified: January 18th, 2023
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -37,8 +37,6 @@
         The <li> of the unordered list are styled using a class "nav-link" that is in the external
         stylesheet, because the navigation menu is something that will be seen on all webpages 
         and should stay in consistent style throught any webpage. 
-        
-        The "placeholders" are used for future webpages that are not created yet. 
       -->
       <nav>
         <ul>
@@ -65,6 +63,9 @@
       <!--
         An image to attract the user's attention with a acorresponding figcaption. 
         Image has alt text to describe what the image is about to improve accessibility. 
+        The image takes up the entire width of the parent element and has a height of 10% of the parent element. 
+        The figcaption is styled in the external stylesheet to make sure that the figcaption stays consistent
+        throughout all webpages. 
       -->
       <figure>
         <img
@@ -97,11 +98,12 @@
         in every webpage that it is used in.
         
         Each section of information contains a title written using <h3> tags and
-        the "body" of the information written using <section> tags.
+        the "body" of the information written using <p> tags.
 
-        Most sections also contain an unordered list that lists different promises.
-        The list items in the unordered list are styled using a class called
-        "description-list-style", and is styled in the external stylesheet. 
+        One section contains an ordered list that lists different promises.
+        The list items in the ordered list are styled using a class called
+        "description-list-style", and are styled in the external stylesheet to make them 
+        consistent across all webpages.. 
       -->
 
       <section>
@@ -129,6 +131,17 @@
       </section>
 
       <br />
+
+      <!-- 
+        The following is a quote that is sourced from: 
+        https://c7r.1b6.myftpupload.com/wp-content/uploads/2021/11/Kapyong-Barracks-Master-Plan.pdf (it is also
+        sourced at the bottom of the wbepage, in "sources").
+        The <section> that contains the quote had an id of "quote". There is only one element on a webpage
+        that needs the styling, so that is why an id is used isntead of a class (a class is used when 
+        you want to style multiple elements on a webpage). 
+        The section that is styling the quote is styled in the external stylesheet to make it conssitent across 
+        multiple webpages.
+      -->
       <section id="quote">
         <div>
           <p>

@@ -325,10 +325,17 @@ section {
 /* 
   The following will style the element that has an id of "treaty-partners-animation" to have:
   - A position of relative, meaning that the element will be positioned relative to its default (static)
-    position, unless you start changing the CSS properties for top, right, bottom, and left.
-  - To have a display behavior of flex (displays elements as block-level flex containers). 
+    position, unless you start changing the CSS properties for top, right, bottom, and left (Scott Hardman).
+  - To have a display behavior of flex (displays elements as flex containers, which helps with 
+    designing responsive webpages) (W3 Schools). Prefixes such as -webkit-, -moz- and -ms- are added to make 
+    this compatible with different browsers.
+  - Align the items inside the flex container even when the items do not all use available space on the main axis (W3 Schools). 
+  - To align the items iside the flex-box to center (W3 Schools). This is used with the prefixes of -webkit-, -moz, and -ms
+    to make it compatible on other browsers. 
   - Have a background color of #fbfbfe, which is an off white and is also the color of the background of the website
   - To have a font-color of #323140, which is a dark-grey with a hint of blue.
+
+  Credit: comments from Scott Hardman, 2023, https://www.w3schools.com/cssref/pr_class_display.php, https://www.w3schools.com/cssref/css3_pr_justify-content.php, and https://www.w3schools.com/cssref/css3_pr_align-items.php . 
 */
 
 #treaty-partners-animation {
@@ -370,7 +377,8 @@ section {
     meaning that the overflow is clipped while the rest of the content is hidden. 
   - To have a width of 52 units relative to the font-size of the parent element.
   -  A position of relative, meaning that the element will be positioned relative to its default (static)
-    position, unless you start changing the CSS properties for top, right, bottom, and left.
+    position, unless you start changing the CSS properties for top, right, bottom, and left (Scott Hardman).
+  Comment Credit: Scott Hardman, 2023.
 */
 #scroller {
   display: inline-block;
@@ -384,16 +392,16 @@ section {
 /* 
   The following will style all the .......to have the following:
   - A position of absolute, meaning that the element will be positioned relative
-    to its closest postioned ancestor (the ancestor's position is anything but "static"). 
+    to its closest postioned ancestor (the ancestor's position is anything but "static")(Scott Hardman). 
   - To have a font-size of 12 times the root-elements default font size.
   - To have a line-height of 1.4 relative to the font-size of the parent-element
   - To align the text to the center of the parent element.
   - Animation:
-    - Defined the animation name as "sliding-words" (the name of the animation). 
-    - Defined the animation duration as 5 seconds (for how long the animation will run for).
-    - Defined the animation delay as 1 second (how long will the animation delay for). 
+    - Defined the animation name as "sliding-words" (the name of the animation) (Scott Hardman). 
+    - Defined the animation duration as 5 seconds (for how long the animation will run for) (Scott Hardman).
+    - Defined the animation delay as 1 second (how long will the animation delay for) (Scott Hardman). 
     - Defined the animation fill-mode (whether the animation will keep it sstyling at the end)
-      as forwards, which means that the animation will keep its styling at the end. 
+      as forwards, which means that the animation will keep its styling at the end (Scott Hardman). 
   - To have a font-weight (the thickness of the font's strokes/lines) of bold (value of 700).
 
   Comment credit : Scott Hardman, 2023
