@@ -41,9 +41,9 @@
 */
 /* 
   The following will style all elements on the webpage to have:
-  - A line-height of 180% of the font-size. 
-  - A space between words the size of 2.5 pixels.
-  - A space between letters of 0.2 pixels. 
+  - A line-height of 140% of the font-size. 
+  - A space between words the size of 0.2 relative to the size of the root element.
+  - A space between letters the size of 0.02 relative to the size of the root element. 
 */
 * {
   line-height: 140%;
@@ -52,7 +52,7 @@
 }
 /* 
   The following will style the HTML element (the root element) to have:
-  - a default font-size of 100% of the browser's default font-size. 
+  - a default font-size of 62.5% of the browser's default font-size. 
 */
 html {
   font-size: 62.5%;
@@ -63,17 +63,31 @@ html {
   - the font size of 1.6 times the root element's font size
   - To have a background color of #fbfbfe, which is an off-white
   - To have a margin (space around the element's border, this time the body element's border)
-    of 20 pixels on the top and bottom and 5 pixels on the right and left.
+    of 2.5% on the top, bottom, left and right because this ebsite is developed in a liquid layout
+    which means that it needs to take up 90-95% of the window. This website takes-up 95%.
 */
 body {
   font-size: 1.6rem;
   background-color: #fbfbfe;
   margin: 2.5%;
 }
-
+/* 
+  The following will style the section around the h1.
+  This section is used to contrast the pale coloring of h1 and make the 
+  h1 pop at the viewer as an element that needs immidiate attention.
+  The section has an id of "title", because I want to style this one section
+  and not all sections on the webpage. This styles the section to have:
+  - a width of auto (which means the width will be automatically adjusted according to the size of the content).
+  - a linear gradient as the background of the section that will be rotated 40 degrees clockwise, with two colors fading into each-other: one is 
+    #9d0101, which is the primary color, and the other is #240b36, which is a dark purple. Prefixes are 
+    added to make sure that the property will be compatible with different browsers. For example, the -webkit-
+    makes this show up on Microsoft Edge, Google Chrome, Apple Safari and modern versions of Opera. -moz- makes 
+    this show up on Mozilla Firefox, while -o- makes this show up on old versions of Opera. 
+*/
 #title {
   width: auto;
-  height: 5%;
+  margin: 2% 1.8%;
+  padding: 5%;
   background: -webkit-linear-gradient(40deg, #9d0101, #240b36);
   background: -moz-linear-gradient(40deg, #9d0101, #240b36);
   background: -o-linear-gradient(40deg, #9d0101, #240b36);
@@ -82,28 +96,27 @@ body {
 /* 
   The following will style the <nav> element to have:
   - a background color of #c4f9f3, which is a tint of cyan. 
+  - a margin 0f 1.8% (a margin is the distance between different elements) of the width of the containing element. 
 */
 nav {
   background-color: #c4f9f3;
   margin: 1.8%;
 }
-ul {
-  margin: 0;
-  padding: 0;
-}
+
 /* 
   The following will style the unordered list inside the <nav> element to have:
-  - A margin (space around the element's border) to be 20 pixles on both top, right, bottom, and left sides.
-  - A padding (space between the inner content and the edges of the content) to be 0 pixels. 
-  - To have a font-size of 2.4 times the root-elements default font size.
+  - A margin (space around the element's border) to be 1% of the containing element. The margin will be
+   on top and bottom only, while the margin on the left and right will be 0.
+  - A padding (space between the inner content and the edges of the content) to be 0. 
+  - To have a font-size of 4.5 times the root-elements default font size.
   - To use the font "Times-New-Roman" before using the font "Times". If neither fonts
     are available, to use the default serif font on the browser. 
   - To have a font-weight (the thickness of the font's strokes/lines) of bold (value of 700).
   - To have a font-color of #323140, which is a very dark-grey with a hint of blue.
-  - To have no bullet-points for each list-item. 
+  - To have no bullet-points for each list-item. ???????????????????????????????????????????
 */
 nav ul {
-  margin: 1%;
+  margin: 1% 0;
   padding: 0;
   font-size: 4.5rem;
   font-family: "Times New Roman", Times, serif;
@@ -114,24 +127,27 @@ nav ul {
 /* 
   The following styles all the list items to have the following:
   - To diplay each list-item as inline block, meaning they will be displayed beside each-other.
+  - a height of 100% of the parent element (in this case it is the <nav>) for each list-item.
 */
 nav li {
   display: inline-block;
+  height: 100%;
 }
 /* 
   The following will style all the <a> anchors in the <nav> element to have the following:
-  - To dipslay each anchor as inline block, meaning they will be displayed beside each-other.
-  - To have the height to be 100% (the height of the content is 100% of the the parent element).
-  - To have a padding (space between the inner content and the edges of the content) to be 25 pixels
-    on the top and bottom, and to be 30 pixels on the left and right.
+  - To display each anchor as inline block, meaning they will be displayed beside each-other.
+  - To have the height to be 100% (the height of the content is 100% of the the parent element. In this
+    case, the parent element is the <nav>).
+  - To have a padding (space between the inner content and the edges of the content) to be 1.5% of the view-width
+    on the top, right, bottom and left..
   - To have a font color of #323140, which is a dark-grey with a hint of blue.
-  - To not have an underline under the element.
+  - To not have an underline under the each anchor.
 */
 nav a {
   display: inline-block;
-  padding: 5% 30px;
   color: #323140;
-
+  padding: 1.5vw;
+  height: 100%;
   text-decoration: none;
 }
 /* 
@@ -140,7 +156,8 @@ nav a {
   - Have a backrgound color of #323140, which is a dark-grey with a hint of blue.
   - To have a font color of #e1fbff, which is a tint of cyan. 
 
-  This means that the backrgound color and the font color will swap-out, except the font-color
+  This means that when an anchor is hovered upon, 
+  the backrgound color and the font color will swap-out, except the font-color
   will be lighter than the background color of the <nav> for better contrast. 
 */
 nav a:hover,
@@ -150,9 +167,12 @@ nav a:focus {
 }
 /* 
   The following will style the <h1> (main heading) to have the folowing:
-  - To have a font-size of 6.5 times the root-elements default font size.
-  - To have a font color of #b20101, which is a red.
+  - To have a font-size of 12 times the root-element's default font size.
+  - To have a font color of #ededed, which is an off-white (the background of the h1 is 
+    a gradient of red and purple. This means that the font color should be lighter than the 
+    background for better readability.
   - To align the text to the heading to the center of the web-page.
+  - a margin 0f 1.8% (a margin is the distance between different elements) of the width of the containing element.
 */
 h1 {
   font-size: 12rem;
@@ -161,13 +181,13 @@ h1 {
   margin: 3.8%;
 }
 /* 
-  The following will style the <h2> (second largest haeding) to have the following:
-  - To have a font-size of 5.5 times the root-elements default font size.
-  - To have a font color of #9d0101, which is a darker red than the red of the <h1>.
+  The following will style the <h2> (second largest heading) to have the following:
+  - To have a font-size of 8 times the root-elements default font size.
+  - To have a font color of #9d0101, which is a darker red than the red of gradient behind the <h1>.
   - To dipslay each heading as inline block, meaning they will be displayed beside other elements.
   - To have a width of 40% of the element's content area.
   - To have a margin (space around the element's border)
-    of 0 pixels on the top and bottom and 40 pixels on the right and left.
+    of 0 on the top and bottom and 2% of the width of the containing element on the right and left.
 */
 h2 {
   font-size: 8rem;
@@ -180,12 +200,12 @@ h2 {
 }
 /* 
   The following styles the <p> elements in a <figcaption> element to have the following:
-  - To have a font-size of 2 times the root-elements default font size.
-  - To have a line-height of 25 pixels.
+  - To have a font-size of 3.5 times the root-elements default font size.
+  - To have a line-height of 140% of the font-size.
   - To use the font "Times-New-Roman" before using the font "Times". If neither fonts
     are available, to use the default serif font on the browser. 
   - To have a margin (space around the element's border) at the bottom of the element 
-    to be 40 pixels. 
+    to be 4% of the width of the containing element. 
 */
 
 figcaption p {
@@ -196,10 +216,10 @@ figcaption p {
 }
 /* 
   The following will style the <h3> element to have the following:
-  - A font-size of 4.2 times the root-elements default font size.
+  - A font-size of 6.5 times the root-elements default font size.
   - To have a font-weight (the thickness of the font's strokes/lines) of bold (value of 700).
   - To have a margin (space around the element's border) to be 1% of the webpage's size.
-  - To have a font color of #9d0101, which is a darker red than the red of the <h1>.
+  - To have a font color of #9d0101, which is a darker red than the red behind the <h1>.
 */
 h3 {
   font-size: 6.5rem;
@@ -209,10 +229,10 @@ h3 {
 }
 /* 
   The following will style the <p> element to have the following:
-  - A font-size of 2.5 times the root-elements default font size.
+  - A font-size of 4.5 times the root-elements default font size.
   - To use the font "Times-New-Roman" before using the font "Times". If neither fonts
     are available, to use the default serif font on the browser.
-  - To have a font-color of #323140, which is a dark-grey with a tint of blue.
+  - To have a font-color of #323140, which is a dark-grey with a hint of blue.
   - To have a margin (space around the element's border) to be 1.5% of the webpage.
 */
 p {
@@ -227,9 +247,9 @@ p {
   - To be 95% of the width of the web-page.
   - To have a height of auto, which means that the height will automatically adjust it's height 
     to the height of the content so it can be displayed correctly.
-  - To have a padding (space between the inner content and the edges of the content) of 25 pixels
+  - To have a padding (space between the inner content and the edges of the content) of 1%
     on the top, bottom, left and right.
-  - To have a margin (space around the element's border) to be 50 pixels.
+  - To have a margin (space around the element's border) to be 2% on the top, right, bottom and left.
 */
 section {
   background-color: #f0f0f0;
@@ -241,16 +261,30 @@ section {
 /* 
   The following styles all elements that are part of the class called "description-list-style" to have:
   - A margin (space around the element's border) to be 2% of the webpage.
-  - A font-size of 2.5 times the root-elements default font size.
+  - A font-size of 4.5 times the root-elements default font size.
 */
 .description-list-style {
   margin: 2%;
   font-size: 4.5rem;
 }
-
+/* 
+  The following styles all the elements that have an id of "quote" to have:
+  - a background color of #fbfbfe, which is an off-white.
+*/
 #quote {
   background-color: #fbfbfe;
 }
+/* 
+  The following styles all the <p> elements inside the <div> elements that are insid ethe elements that 
+  have an id of "quote" to have:
+  - a font-size of 7 times the root-elements default font size.
+  - To use the font "Georgia" before using the font "Times". If neither fonts
+    are available, to use the default serif font on the browser.
+  - To have a font-weight (the thickness of the font's strokes/lines) of bolder (defines very thick characters). 
+  - To align the text to the center of the web-page.
+  - To have a font color of #535336e, which is lighter variation of the font color of the <p> elements.
+  - To have a font-style of italic, meaning that the letters will be italicized.  
+*/
 #quote div p {
   font-size: 7rem;
   font-family: Georgia, Times, serif;
@@ -259,6 +293,17 @@ section {
   color: #53536e;
   font-style: italic;
 }
+/* 
+  The following will style all the <p> elements that are inside the elements taht have an id 
+  of "quote" to have the following:
+  - A font-size of 5 times the root-elements default font size.
+  - To use the font "Georgia" before using the font "Times". If neither fonts
+    are available, to use the default serif font on the browser.
+  - To have a font-weight (the thickness of the font's strokes/lines) of bolder (defines very thick characters). 
+  - To align the text to the center of the web-page.
+  - To have a font color of #535336e, which is lighter variation of the font color of the <p> elements.
+  - To have a font-style of italic, meaning that the letters will be italicized.
+*/
 #quote p {
   font-size: 5rem;
   font-family: Georgia, Times, serif;
@@ -270,14 +315,23 @@ section {
 /* 
   The following styles all elements that are part of the class called "source-link" to have:
   - To have no bullet-points for each list-item. 
-  - A font-size of 2.5 times the root-elements default font size.
+  - A font-size of 4 times the root-elements default font size.
 */
 .source-link {
   list-style: none;
   font-size: 4rem;
 }
 
-#hello {
+/* 
+  The following will style the element that has an id of "treaty-partners-animation" to have:
+  - A position of relative, meaning that the element will be positioned relative to its default (static)
+    position, unless you start changing the CSS properties for top, right, bottom, and left.
+  -Flex???????????????????????????????????????????
+  - Have a background color of #fbfbfe, which is an off white and is also the color of the background of the website
+  - To have a font-color of #323140, which is a dark-grey with a hint of blue.
+*/
+
+#treaty-partners-animation {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -297,13 +351,28 @@ section {
   background-color: #fbfbfe;
   color: #323140;
 }
-#hello h1 {
+/* 
+  The following will style the h1 elements inside the element that has an id of "treaty-partners-animation" to have:
+  - To have a font-color of #323140, which is a dark-grey with a hint of blue.
+  - A line-height of 1.4 times the size of the root element. 
+*/
+#treaty-partners-animation h1 {
   color: #323140;
   line-height: 1.4em;
 }
 
-/* Scroller styling */
-.scroller {
+/* 
+  The following styles the element that has an id of "scroller" to have the following:
+  -  To dipslay each heading as inline block, meaning they will be displayed beside other elements.
+  - To have a height of 16 times the root elemnt's default size.
+  - To have a line-height of 0.
+  - To have the overflow (when the content is too big to fit inside the content area) to be hidden, 
+    meaning that the overflow is clipped while the rest of the content is hidden. 
+  - To have a width of 52 units relative to the font-size of the parent element.
+  -  A position of relative, meaning that the element will be positioned relative to its default (static)
+    position, unless you start changing the CSS properties for top, right, bottom, and left.
+*/
+#scroller {
   display: inline-block;
   height: 16rem;
   line-height: 0;
@@ -311,19 +380,26 @@ section {
   width: 52em;
   position: relative;
 }
-.scroller > span {
+
+/* 
+  The following will style all the .......to have the following:
+  - A position of absolute, meaning that the element will be positioned relative
+    to its closest postioned ancestor (the ancestor's position is anything but "static"). 
+  - To have a font-size of 12 times the root-elements default font size.
+  - To have a line-height of 1.4 relative to the font-size of the parent-element
+  - To align the text to the center of the parent element.
+  - To 
+  - To have a font-weight (the thickness of the font's strokes/lines) of bold (value of 700).
+*/
+#scroller > span {
   position: absolute;
   font-size: 12rem;
   line-height: 1.4em;
   text-align: center;
-  -webkit-animation: slide 5s;
-  -moz-animation: slide 5s;
-  -o-animation: slide 5s;
-  animation: slide 5s;
-  /* -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; */
+  -webkit-animation: slide 5s 1 forwards;
+  -moz-animation: slide 5s 1 forwards;
+  -o-animation: slide 5s 1 forwards;
+  animation: slide 5s 1 forwards;
   font-weight: bold;
 }
 @-webkit-keyframes slide {
@@ -337,6 +413,9 @@ section {
     top: -2.8em;
   }
   75% {
+    top: -4.2em;
+  }
+  100% {
     top: -4.2em;
   }
 }
@@ -353,6 +432,9 @@ section {
   75% {
     top: -4.2em;
   }
+  100% {
+    top: -4.2em;
+  }
 }
 @-o-keyframes slide {
   0% {
@@ -367,6 +449,9 @@ section {
   75% {
     top: -4.2em;
   }
+  100% {
+    top: -4.2em;
+  }
 }
 @keyframes slide {
   0% {
@@ -379,6 +464,9 @@ section {
     top: -2.8em;
   }
   75% {
+    top: -4.2em;
+  }
+  100% {
     top: -4.2em;
   }
 }

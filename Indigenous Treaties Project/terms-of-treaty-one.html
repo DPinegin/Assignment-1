@@ -18,11 +18,11 @@
         New transition sourced from: https://www.joshwcomeau.com/animation/css-transitions/
         animation sources: https://blog.hubspot.com/website/css-animation-examples
       */
-      .anniversary {
-        background: -webkit-linear-gradient(160deg, #92fe9d, #c4f9f3);
-        background: -moz-linear-gradient(160deg, #92fe9d, #c4f9f3);
-        background: -o-linear-gradient(160deg, #92fe9d, #c4f9f3);
-        background: linear-gradient(160deg, #92fe9d, #c4f9f3);
+      #travel-manitoba-link {
+        background: -webkit-linear-gradient(160deg, #c4f9f3, #e1fbff);
+        background: -moz-linear-gradient(160deg, #c4f9f3, #e1fbff);
+        background: -o-linear-gradient(160deg, #c4f9f3, #e1fbff);
+        background: linear-gradient(160deg, #c4f9f3, #e1fbff);
         border: none;
         padding: 2%;
         color: #323140;
@@ -30,34 +30,43 @@
         text-align: center;
         display: inline-block;
         text-decoration: none;
+        -webkit-transition: transform 250ms;
+        -o-transition: transform 250ms;
+        -ms-transition: transform 250ms;
+        -moz-transition: transform 250ms;
         transition: transform 250ms;
         position: relative;
         font-weight: bolder;
       }
-      .anniversary:hover {
+      #travel-manitoba-link:hover {
+        -webkit-transform: translateY(-20%);
+        -ms-transform: translateY(-20%);
+        -moz-transform: translateY(-20%);
+        -o-transform: translateY(-20%);
         transform: translateY(-20%);
       }
-      .direction-image {
+      #direction-image {
         opacity: 0.9;
         filter: brightness(50%);
       }
       #manitoba-treaties {
-        width: auto;
-        background-image: url("images/treaty-one-celebration.jpg");
+        width: 95%;
+        background-image: url("images/bannock-travel-manitoba-cover-image.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         height: 100%;
+        margin: 3% 2%;
       }
       #manitoba-treaties p {
-        color: white;
+        color: rgb(237, 237, 237);
+        margin: 1% 0.5% 2% 3%;
       }
-      #manitoba-treaties-title {
+      #manitoba-treaties h1 {
+        display: inline-block;
+        margin: 1% 0.5% 0.01% 3%;
         font-size: 20rem;
         font-weight: bolder;
-        color: rgb(243, 243, 243);
-        bottom: 8px;
-        left: 16px;
-        display: inline-block;
+        color: rgb(237, 237, 237);
       }
     </style>
   </head>
@@ -67,9 +76,8 @@
         The header of the webpage. Contains the main heading written using <h1>, and the navigation
         menu written using unordered lists.
       -->
-      <section id="title">
-        <h1>The Numbered Treaties of Canada</h1>
-      </section>
+
+      <h1 id="title">The Numbered Treaties of Canada</h1>
       <!--
         The navigation menu contained in the <nav> sematic tag.
 
@@ -120,11 +128,11 @@
         "description-list-style", and is styled in the external stylesheet. 
         -->
 
-      <section id="hello">
+      <section id="treaty-partners-animation">
         <h1 style="display: inline-block">We are</h1>
         <!-- Scroller Start -->
 
-        <div class="scroller">
+        <div id="scroller">
           <span>
             Peguis<br />Sagkeeng<br />Brokenhead<br />Treaty Partners
           </span>
@@ -156,6 +164,7 @@
           </li>
         </ul>
       </section>
+
       <section>
         <h3>Obligations of the Crown</h3>
         <p>
@@ -191,23 +200,21 @@
       </section>
 
       <section id="manitoba-treaties">
-        <p id="manitoba-treaties-title">Treaties in Manitoba</p>
-        <div id="manitoba-treaties-background">
-          <p>
-            There are many historial landmarks in Manitoba regarding the
-            Treaties and the Treaty-making process.
-          </p>
-          <p>
-            Many sites are still up for people to visit and learn about the
-            importance of the Treaties and current implementations of the
-            Treaties. Click the following link to learn more.
-          </p>
-        </div>
+        <h1>Treaties in Manitoba</h1>
+        <p>
+          There are many historial landmarks in Manitoba regarding the Treaties
+          and the Treaty-making process.
+        </p>
+        <p>
+          Many sites are still up for people to visit and learn about the
+          importance of the Treaties. Click the following link to learn more.
+        </p>
+        <br />
         <br />
         <a
           href="https://www.travelmanitoba.com/places/treaty-areas/"
           target="blank"
-          class="anniversary">
+          id="travel-manitoba-link">
           Click here to go to Travel-Manitoba Treaties in Manitoba Website
         </a>
       </section>
@@ -307,6 +314,15 @@
               class="source-link">
               Click here to go to Government of Canada Treaty One Anniversary
               Webpage
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://publications.gc.ca/collections/collection_2011/ainc-inac/R3-145-2011-eng.pdf"
+              target="blank"
+              class="source-link">
+              Click here to go to the Indian and Northern Affairs Canada
+              Treaties in Manitoba online PDF
             </a>
           </li>
         </ul>
